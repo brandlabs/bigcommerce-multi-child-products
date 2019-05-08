@@ -94,9 +94,6 @@
 </template>
 
 <script>
-const ADD_TO_CART_MESSAGE = 'Add to Cart';
-const ADDING_TO_CART_MESSAGE = 'Adding to Cart...';
-
 /**
  * We add to cart the selected row
  * @param {number} qty Number of items selected
