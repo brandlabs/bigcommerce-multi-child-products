@@ -87,6 +87,7 @@ export default function ($scopeBuilder, context, vueContainerSelector = '.js-mul
     builder.product_id = context.product_id;
     builder.lang = lang;
     builder.addToCartMessage = lang.langAddToCart;
+    builder.freeShipping = !!document.querySelector('.product-free-shipping');
 
     // For each option values combination we get its sku and price and update the rows accordingly for Vue to update
     newOptions.forEach((newOption, newOptionIndex) => {

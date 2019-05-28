@@ -44,7 +44,7 @@
                                 <div>{{ lang.langPrice }}</div>
                             </div>
                             <div class="child-item-price-container">
-                                <div>{{ option.price }}</div>
+                                <div>{{ lang.langCurrencyToken }}{{ option.price }}</div>
                             </div>
                         </div>
                         <div class="child-grid-row-qty">
@@ -69,7 +69,13 @@
                             </div>
                             <div class="child-item-add-container">
                                 <div class="child-add-checkbox-field w-checkbox" v-if="option.instock">                                    
-                                    <input type="checkbox" class="child-add-checkbox-hide w-checkbox-input" @change="optionSelected()">
+                                    <input 
+                                        :id="option.sku"
+                                        type="checkbox" 
+                                        class="child-add-checkbox-hide w-checkbox-input" 
+                                        @change="optionSelected()"
+                                    >
+                                    <label :for="option.sku" class="child-add-checkbox-label w-form-label"></label>
                                 </div>
                                 <div v-else class="child-add-checkbox-field w-checkbox">
                                     <p>{{ lang.langOutOfStock }}</p>
@@ -80,7 +86,7 @@
                 </div>
             </div>
             <div class="child-grid-atc-button">
-                <div class="product-free-shipping">
+                <div class="product-free-shipping" v-if="freeShipping">
                     <img src="/content/icons/product-badge-free-shipping.svg" alt="Free Shipping!" class="product-free-shipping-badge">
                 </div>
                 <div class="child-grid-total-label">{{ lang.langTotal }}</div>
@@ -136,6 +142,7 @@ export default {
             product_id: 0,
             partial: [],
             addToCartDisabled: false,
+            freeShipping: false,
             lang: {},
             addToCartMessage: '',
         };
@@ -155,7 +162,7 @@ export default {
 
                     const $parent = $input.closest('.child-grid-row');
 
-                    const price = parseFloat($parent.querySelector('.child-item-price-container').textContent, 10);
+                    const price = parseFloat($parent.querySelector('.child-item-price-container').textContent.replace(this.lang.langCurrencyToken, ''), 10);
                     const qty = parseInt($parent.querySelector('.child-grid-qty-field').value, 10);
 
                     this.total += price * qty;
