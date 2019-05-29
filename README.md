@@ -19,6 +19,7 @@ Now on product.js file you can import the package passing the scope which is a j
 - langProductCode
 - langItemName
 - langQty
+- langPrice
 - langAdd
 - langTotal
 - langAddToCart
@@ -64,6 +65,7 @@ We need to inject this text into the context object, one way to do this is to cr
 {{inject 'langSelectItems' (lang 'multichild_product.select_items')}}
 {{inject 'langProductCode' (lang 'multichild_product.product_code')}}
 {{inject 'langItemName' (lang 'multichild_product.item_name')}}
+{{inject 'langPrice' (lang 'multichild_product.price')}}
 {{inject 'langQty' (lang 'multichild_product.qty')}}
 {{inject 'langAdd' (lang 'multichild_product.add')}}
 {{inject 'langTotal' (lang 'multichild_product.total')}}
@@ -127,6 +129,20 @@ Now, we add this into our (custom) template and inject `options` and `product_id
 </div>
 ```
 
+If we want to show our own free shipping section, let's say, we have on our normal template the next free shipping element:
+
+```html
+    {{#if product.shipping}}
+        {{#if product.shipping.price.value '==' 0}}
+            <div class="product-free-shipping">
+                <img src="{{cdn 'icons/product-badge-free-shipping.svg'}}" alt="{{lang 'products.shipping_free'}}" class="product-free-shipping-badge">
+            </div>
+        {{/if}}
+    {{/if}}
+```
+
+With the class name `.product-free-shipping` we tell the widget to render the free shipping element. The SVG inside points to `/content/icons/product-badge-free-shipping.svg` which is the same as in the normal shipping template above. This is just in case you want to render a free shipping inside the widget as shown in the example below.
+
 Lastly, on _product.js_ we import and use the package:
 
 ```javascript
@@ -157,7 +173,13 @@ export default class Product extends PageManager {
 
 That's it, you should be able to use the VueJs component
 
-TODO: Place pic/video with the component in action.
+This is how a normal product page can look:
+
+![](/assets/normal-product-page/jpg)
+
+and this is how it looks with the our custom template is applied (styling is inside the normal `productView.scss` file).
+
+![](/assets/multichild-product-page/jpg)
 
 ## Notes
 
