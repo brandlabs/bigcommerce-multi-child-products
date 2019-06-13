@@ -175,11 +175,11 @@ That's it, you should be able to use the VueJs component
 
 This is how a normal product page can look:
 
-![](/assets/normal-product-page/jpg)
+![](./assets/images/normal-product-page.jpg)
 
 and this is how it looks with the our custom template is applied (styling is inside the normal `productView.scss` file).
 
-![](/assets/multichild-product-page/jpg)
+![](./assets/images/multichild-product-page.jpg)
 
 ## Notes
 
@@ -193,4 +193,4 @@ When clicking the Add to Cart button, customer is redirected to the Cart page si
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-[![alt text](/assets/brandlabs.png)](http://www.brandlabs.us/?utm_source=gitlab&utm_medium=technology_referral&utm_campaign=brandlabs-bigcommerce-sitewide-banners)
+[![alt text](./assets/images/brandlabs.png)](http://www.brandlabs.us/?utm_source=gitlab&utm_medium=technology_referral&utm_campaign=brandlabs-bigcommerce-sitewide-banners)
