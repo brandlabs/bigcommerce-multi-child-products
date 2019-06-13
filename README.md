@@ -12,7 +12,7 @@ On the product template you can also hide (or remove) the Add to Cart button sin
 
 Also, on your (custom) template you can add a CSS class like `js-multichild-product-view` on your productView `<div>` element in order to pass it as the scope for the VueJs component.
 
-Now on product.js file you can import the package passing the scope which is a jQuery object (since jQuery is already imprted by BigCommerce). Also, you need to pass the `context` object with product `options` and `product_id` (injected from your template) along with all text that can be injected from your language file through your template. Later we'll show an example of how to inject this data but for now, these are the language properties that need to be passed to the `context` object:
+Now on product.js file you can import the package passing the scope which is a jQuery object (since jQuery is already imported by BigCommerce). Also, you need to pass the `context` object with product `options` and `product_id` (injected from your template) along with all text that can be injected from your language file through your template. Later we'll show an example of how to inject this data but for now, these are the language properties to be passed to the `context` object:
 
 - langCurrencyToken -> this comes from `settings.money.currency_token`
 - langSelectItems
@@ -177,7 +177,7 @@ This is how a normal product page can look:
 
 ![](./assets/images/normal-product-page.jpg)
 
-and this is how it looks with the our custom template is applied (styling is inside the normal `productView.scss` file).
+and this is how it looks with our custom template applied (styling can be inside the normal `productView.scss` file).
 
 ![](./assets/images/multichild-product-page.jpg)
 
