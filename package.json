@@ -1,7 +1,7 @@
 {
   "name": "bigcommerce-multi-child-products",
-  "version": "0.0.1",
-  "description": "Turns a ",
+  "version": "0.1.0",
+  "description": "Multiple child products (variants) displayed and added to cart on your BigCommerce store theme",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,10 +11,9 @@
     "type": "git",
     "url": "git@github.com:brandlabs/bigcommerce-multi-child-products.git"
   },
+  "homepage": "https://github.com/brandlabs/bigcommerce-multi-child-products",
   "keywords": [
-    "bigcommerce",
-    "sitewide banners",
-    "banners"
+    "bigcommerce"
   ],
   "author": "Hector Fernando Hurtado Montoya",
   "contributors": [

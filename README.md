@@ -192,4 +192,4 @@ When clicking the Add to Cart button, customer is redirected to the Cart page si
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-[![alt text](/assets/brandlabs.png)](http://www.brandlabs.us/?utm_source=gitlab&utm_medium=technology_referral&utm_campaign=brandlabs-bigcommerce-multi-child-products)
+[![alt text](./assets/images/brandlabs.png)](http://www.brandlabs.us/?utm_source=gitlab&utm_medium=technology_referral&utm_campaign=brandlabs-bigcommerce-multi-child-products)
