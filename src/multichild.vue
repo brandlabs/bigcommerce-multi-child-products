@@ -52,12 +52,12 @@
                                 <div>{{ lang.langQty }}</div>
                             </div>
                             <div class="child-item-qty-container">
-                                <input 
-                                    type="text" 
-                                    class="child-grid-qty-field w-input" 
-                                    maxlength="256" 
-                                    placeholder="1" 
-                                    value="1" 
+                                <input
+                                    type="text"
+                                    class="child-grid-qty-field w-input"
+                                    maxlength="256"
+                                    placeholder="1"
+                                    value="1"
                                     :data-optionid="optionIndex"
                                     @input="optionSelected()"
                                 >
@@ -68,11 +68,11 @@
                                 <div>{{ lang.langAdd }}</div>
                             </div>
                             <div class="child-item-add-container">
-                                <div class="child-add-checkbox-field w-checkbox" v-if="option.instock">                                    
-                                    <input 
+                                <div class="child-add-checkbox-field w-checkbox" v-if="option.instock">
+                                    <input
                                         :id="option.sku"
-                                        type="checkbox" 
-                                        class="child-add-checkbox-hide w-checkbox-input" 
+                                        type="checkbox"
+                                        class="child-add-checkbox-hide w-checkbox-input"
                                         @change="optionSelected()"
                                     >
                                     <label :for="option.sku" class="child-add-checkbox-label w-form-label"></label>
@@ -193,7 +193,7 @@ export default {
             }
 
             this.addToCartMessage = this.langAddToCart;
-            location.href = '/cart.php';
+            window.location.href = '/cart.php';
         }
     }
 }

@@ -186,11 +186,10 @@ and this is how it looks with our custom template applied (styling can be inside
 When clicking the Add to Cart button, customer is redirected to the Cart page since there is no easy way to show the added products on the cart preview popup.
 
 ## Authors
-* Carson Reinke
 * Hector Fernando Hurtado
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-[![alt text](./assets/images/brandlabs.png)](http://www.brandlabs.us/?utm_source=gitlab&utm_medium=technology_referral&utm_campaign=brandlabs-bigcommerce-sitewide-banners)
+[![alt text](/assets/brandlabs.png)](http://www.brandlabs.us/?utm_source=gitlab&utm_medium=technology_referral&utm_campaign=brandlabs-bigcommerce-multi-child-products)
