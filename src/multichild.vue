@@ -91,7 +91,7 @@
                 </div>
                 <div class="child-grid-total-label">{{ lang.langTotal }}</div>
                 <p class="product-price child-grid-total-price">
-                    <span class="product-price-dollar">{{ lang.langCurrencyToken }}</span>{{ total ? total.toFixed(2) : 0 }}
+                    <span class="product-price-dollar">{{ lang.langCurrencyToken }}</span>{{ total ? total.toFixed(2) : '0.00' }}
                 </p>
                 <button v-if="total > 0" class="button button--primary form-addtocart-childgrid w-button" @click.stop="addToCart()" :disabled="addToCartDisabled" type="button">{{ addToCartMessage }}</button>
             </div>

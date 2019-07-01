@@ -9688,7 +9688,8 @@ var render = function() {
                 _vm._v(_vm._s(_vm.lang.langCurrencyToken))
               ]),
               _vm._v(
-                _vm._s(_vm.total ? _vm.total.toFixed(2) : 0) + "\n            "
+                _vm._s(_vm.total ? _vm.total.toFixed(2) : "0.00") +
+                  "\n            "
               )
             ]),
             _vm._v(" "),
