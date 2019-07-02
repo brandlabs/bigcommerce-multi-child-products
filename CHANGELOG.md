@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Two digits for zero dollars on Total section
+- Price formatting using locale settings on Total section
 
 ## [0.1.0] - 2019-06-14
 ### Added
