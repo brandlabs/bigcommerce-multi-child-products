@@ -91,7 +91,7 @@
                 </div>
                 <div class="child-grid-total-label">{{ lang.langTotal }}</div>
                 <p class="product-price child-grid-total-price">
-                    <span class="product-price-dollar">{{ lang.langCurrencyToken }}</span>{{ total ? total.toFixed(2) : 0 }}
+                    <span class="product-price-dollar">{{ lang.langCurrencyToken }}</span>{{ total ? formatPrice(total) : formatPrice(0) }}
                 </p>
                 <button v-if="total > 0" class="button button--primary form-addtocart-childgrid w-button" @click.stop="addToCart()" :disabled="addToCartDisabled" type="button">{{ addToCartMessage }}</button>
             </div>
@@ -194,6 +194,19 @@ export default {
 
             this.addToCartMessage = this.langAddToCart;
             window.location.href = '/cart.php';
+        },
+
+        /*
+         * We format the price using current locale settings
+         * @param   {number}
+         * @returns {string}
+         */
+        formatPrice(price) {
+            if ('Intl' in window) {
+                return new Intl.NumberFormat(Intl.NumberFormat().resolvedOptions().locale, { minimumFractionDigits: 2 }).format(price);
+            }
+
+            return price.toFixed(2);
         }
     }
 }
