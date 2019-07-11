@@ -44,7 +44,7 @@
                                 <div>{{ lang.langPrice }}</div>
                             </div>
                             <div class="child-item-price-container">
-                                <div>{{ lang.langCurrencyToken }}{{ option.price }}</div>
+                                <div>{{ lang.langCurrencyToken }}{{ formatPrice(option.price) }}</div>
                             </div>
                         </div>
                         <div class="child-grid-row-qty">
