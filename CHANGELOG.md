@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- Package security vulnerabilities by using `int-utils": ">=1.4.1"`, `"mem": ">=4.0.0"` and `"lodash": ">=4.17.13"`.
 
 ## [0.2.1] - 2019-07-11
 ### Added
