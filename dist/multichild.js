@@ -557,7 +557,21 @@ exports.default = {
             }
 
             return addToCart;
-        }()
+        }(),
+
+
+        /*
+         * We format the price using current locale settings
+         * @param   {number}
+         * @returns {string}
+         */
+        formatPrice: function formatPrice(price) {
+            if ('Intl' in window) {
+                return new Intl.NumberFormat(Intl.NumberFormat().resolvedOptions().locale, { minimumFractionDigits: 2 }).format(price);
+            }
+
+            return price.toFixed(2);
+        }
     }
 };
 
@@ -9581,7 +9595,7 @@ var render = function() {
                             _c("div", [
                               _vm._v(
                                 _vm._s(_vm.lang.langCurrencyToken) +
-                                  _vm._s(option.price)
+                                  _vm._s(_vm.formatPrice(option.price))
                               )
                             ])
                           ]
@@ -9688,8 +9702,9 @@ var render = function() {
                 _vm._v(_vm._s(_vm.lang.langCurrencyToken))
               ]),
               _vm._v(
-                _vm._s(_vm.total ? _vm.total.toFixed(2) : "0.00") +
-                  "\n            "
+                _vm._s(
+                  _vm.total ? _vm.formatPrice(_vm.total) : _vm.formatPrice(0)
+                ) + "\n            "
               )
             ]),
             _vm._v(" "),
